@@ -1,0 +1,124 @@
+.recipe-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 230, 0);
+    max-height: 600px;
+}
+
+.leftContainer {
+    width: 40%;
+    margin-left: 50px;
+
+}
+
+.rightContainer {
+    width: 50%;
+}
+img{
+    width: 100%;
+}
+
+.all-recipe-details {
+    margin-top: 50px;
+}
+
+.all-recipe-details>div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.all-recipe-details>div>div {
+    width: 48%;
+    /* כדי להשאיר מרווח בין האלמנטים */
+}
+
+.all-recipe-details>div>div>div {
+    font-weight: bold;
+}
+
+/* פס מפריד */
+
+.line {
+    width: 2px;
+    height:100px;
+    background-color: rgb(86, 86, 86);
+}
+
+h1 {
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+h2 {
+    font-size: 70px;
+    padding-top: 30px;
+    line-height: 1.0;
+
+
+}
+
+h3 {
+    font-size: 30px;
+    padding-top: 30px;
+
+}
+
+.recipeImg {
+    max-height: 600px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background-color: rgb(86, 86, 86);
+    line-height: 100px;
+}
+
+.info {
+    line-height: 1.0;
+    width: 30%!important;
+}
+.ingredients {
+    background-color: #f0f0f0; /* גוון אפור */
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  
+  .ingredients h2 {
+    color: #fdca00; /* צהוב */
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .ingredients ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ingredients li {
+    color: #333; /* גוון אפור כהה */
+    font-size: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+
+  }
+  .between{
+    margin-left: 30px;
+
+    width: 30%!important;
+    justify-content: space-around!important;
+  }
+  .delete-button {
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .delete-button:hover {
+    background-color: #f5f5f5;
+  }
+  

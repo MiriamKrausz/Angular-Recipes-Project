@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <div class="logo">{{authorUser?.name?.at(0)}}</div>
+
+        <mat-card-title>{{ recipe.name }}</mat-card-title>
+
+        <mat-card-subtitle>By {{authorUser?.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{recipe.imageRoute}} class="img-recipe">
+    <mat-card-content>
+        <div class="details">
+            <p>
+                <mat-icon matSuffix>timer</mat-icon>
+
+                {{ recipe.preparationTime | durationFormat }}
+            </p>
+            <p>{{recipe.dateAddedToWebsite.toString().slice(0,10)}}</p>
+
+        </div>
+        <p class="card-text stars">{{ recipe.difficultyLevel | difficultyLevel }}</p>
+
+    </mat-card-content>
+    <div class="btnDiv">
+         <mat-card-actions>
+            <button mat-button [disabled]="!this.isLoggedIn" class="btnCard" (click)="viewRecipe()">View</button>
+        </mat-card-actions>
+        
+        <mat-card-actions>
+            <button  [disabled]="!this.isLoggedInanOwner" mat-button class="btnCard" (click)="editRecipe()"  
+            [matTooltip]="this.isLoggedInanOwner ? 'Only the author of the recipe can edit it': ''">Edit</button>
+       </mat-card-actions>
+    </div>
+</mat-card>

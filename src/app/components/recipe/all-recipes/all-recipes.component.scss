@@ -1,0 +1,83 @@
+.search-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+/* Custom styles for the slider */
+.custom-slider .mat-slider-track-fill {
+  background-color: yellow; /* צבע רקע של ה-slider */
+}
+
+.custom-slider .mat-slider-thumb {
+  background-color: black; /* צבע הכפתור של ה-slider */
+}
+
+.filterBtn {
+  background-color: yellow;
+  width: fit-content;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.allRecipesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.allRecipesCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.allRecipes .example-card {
+  flex-grow: 1;
+  margin: 10px;
+  max-width: calc(50% - 20px);
+}
+.searchBtn{
+  width: 5px;
+  background-color: rgb(255, 230, 0);
+  border-radius: 5%;
+}
+.no-results-message {
+  font-size: 30px;
+  color: black;
+  background-color: #f0f0f0;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+.fa-spinner {
+
+margin-top: 200px;
+margin: auto;
+font-size: 80px;
+margin-left: 40%;
+
+}
+.loading{
+  font-size:40px;
+
+
+}
+.btn{
+  background-color: rgb(255, 230, 0);;
+}
+@media screen and (max-width: 768px) {
+  .allRecipes .example-card {
+    max-width: calc(100% - 20px);
+  }
+}

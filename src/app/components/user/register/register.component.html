@@ -1,0 +1,65 @@
+<div class="example-container">
+
+  <form [formGroup]="registerForm" class="register-form form" (ngSubmit)="register()">
+
+
+    <h1>Register</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your name</mat-label>
+      <input matInput formControlName="userName" [value]="name">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint></mat-hint>
+      <mat-error *ngIf="registerForm.controls['userName'].hasError('required')">User name is
+        <strong>required</strong></mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your address</mat-label>
+      <input matInput formControlName="address">
+      <mat-icon matSuffix>home</mat-icon>
+      <mat-hint></mat-hint>
+      <mat-error *ngIf="registerForm.controls['address'].hasError('required')">User address is
+        <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput formControlName="email">
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-hint>
+      </mat-hint>
+      <mat-error
+        *ngIf="registerForm.controls['email'].hasError('email') && !registerForm.controls['email'].hasError('required')">Please
+        enter a valid email address</mat-error>
+      <mat-error *ngIf="registerForm.controls['email'].hasError('required')">Email is
+        <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput formControlName="password"
+        [ngClass]="{'valid': registerForm.controls['password'].valid, 'invalid': registerForm.controls['password'].invalid}"
+        (input)="checkPasswordConditions()">
+      <mat-icon matSuffix>lock</mat-icon>
+      <mat-error *ngIf="registerForm.controls['password'].hasError('required')">Password is
+        <strong>required</strong></mat-error>
+    </mat-form-field>
+    <ul class="password-conditions" [ngClass]="{'hide': isAtLeast8Chars && hasUppercase && hasLowercase && hasSpecialChar && hasNumber}">
+      <li class="password-condition" [ngClass]="{'valid': isAtLeast8Chars, 'invalid': !isAtLeast8Chars}">Password must
+        be at least 8 characters long</li>
+      <li class="password-condition" [ngClass]="{'valid': hasUppercase, 'invalid': !hasUppercase}">Must contain at least
+        one uppercase letter</li>
+      <li class="password-condition" [ngClass]="{'valid': hasLowercase, 'invalid': !hasLowercase}">Must contain at least
+        one lowercase letter</li>
+      <li class="password-condition" [ngClass]="{'valid': hasSpecialChar, 'invalid': !hasSpecialChar}">Must contain a
+        special character</li>
+      <li class="password-condition" [ngClass]="{'valid': hasNumber, 'invalid': !hasNumber}">Must contain a number</li>
+    </ul>
+    
+
+    <button mat-raised-button  class="submit-button" type="submit"
+      [disabled]="!registerForm.valid">Register</button>
+
+
+
+  </form>
+</div>

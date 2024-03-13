@@ -1,0 +1,49 @@
+
+
+   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 230, 0); position: fixed;">
+    <div class="container-fluid justify-content-between">
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center">
+            <img src="../../../assets/images/logooo.png"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <a href="/home" class="nav-link" style="font-size: 30px;"><span><i class="fas fa-home"></i></span></a>
+            <ul class="navbar-nav flex-row d-none d-md-flex">
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="user/login">Login <span><i class="fas fa-sign-in-alt"></i></span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link"  (click)="logout()">Logout <span><i class="fas fa-sign-out-alt"></i></span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="/user/register">Register <span><i class="fas fa-user-plus"></i></span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="/recipe">All Recipes <span><i class="fas fa-utensils"></i></span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="/recipe/add">Add Recipe <span><i class="fas fa-plus-square"></i></span></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link d-sm-flex align-items-sm-center">
+                        <div class="logo">{{userName?.at(0)}}</div>
+                        <strong class="d-none d-sm-block ms-1">{{userName}}</strong>
+                    </a>
+                </li>
+                <li class="nav-item dropdown me-3 me-lg-1">
+                    <a class="nav-link dropdown-toggle hidden-arrow" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-comments fa-lg"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">6</span>
+                    </a>
+                    <!-- Dropdown menu here -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

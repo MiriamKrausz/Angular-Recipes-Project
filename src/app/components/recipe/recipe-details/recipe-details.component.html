@@ -1,0 +1,63 @@
+
+<div class="recipe-details">
+  <div class="leftContainer">
+
+    <button mat-fab color="black" matTooltip="Delete recipe" aria-label="Example icon button with a delete icon"
+      (click)="deleteRecipe()">
+      <mat-icon>delete</mat-icon>
+    </button>
+
+    <h1 id="categoryName">
+      Recipes > {{category.name}}>
+    </h1>
+
+
+
+    <h2 id="recipeName">
+      {{recipeToShow.name}}
+    </h2>
+
+    <h3>
+      By {{author.name}}
+    </h3>
+
+
+  </div>
+
+  <div class="rightContainer">
+    <img src={{recipeToShow.imageRoute}} class="recipeImg">
+  </div>
+
+
+</div>
+
+<div class="all-recipe-details">
+  <div style="width: 40%; " class="between">
+    <div class="info">
+      <div style="font-size: 20px;">Preparation time:</div>
+      <div style="font-size: 30px;"> {{ recipeToShow.preparationTime | durationFormat }}</div>
+    </div>
+    <p class="line"></p>
+    <div class="info">
+      <div style="font-size: 20px; line-height: 1.0;">Level of difficulty:</div>
+      <div style="font-size: 30px;"> {{ recipeToShow.difficultyLevel | difficultyLevel }}</div>
+    </div>
+  </div>
+
+  <div class="ingredients">
+    <h2>Ingredients:</h2>
+    <ul>
+      <li *ngFor="let ingredient of recipeToShow.ingredients">
+        - {{ingredient}}
+      </li>
+    </ul>
+  </div>
+  <div class="ingredients">
+    <h2>Preparation steps:</h2>
+    <ul>
+      <li *ngFor="let instruction of recipeToShow.preparation;let i=index">
+        {{i+1}}. {{instruction}}
+      </li>
+    </ul>
+  </div>
+</div>

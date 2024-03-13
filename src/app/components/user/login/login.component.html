@@ -1,0 +1,28 @@
+<div class="example-container">
+    <form [formGroup]="loginForm" class="login-form form" (ngSubmit)="submit()">
+        <h1>Login</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="Israel Israeli" formControlName="userName">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <mat-error *ngIf="loginForm.get('userName')?.errors">User name is
+                <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password"
+                formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="loginForm.get('password')?.errors">Password is
+                <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+      
+        <button mat-raised-button class="btn" style="width: 100%;" type="submit"
+            [disabled]="!loginForm.valid">Login</button>
+    </form>
+</div>

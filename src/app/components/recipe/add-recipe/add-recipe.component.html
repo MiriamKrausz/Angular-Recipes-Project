@@ -1,0 +1,78 @@
+<div class="example-container">
+
+  <form [formGroup]="recipeForm" class="register-form form" (ngSubmit)="addRecipe()">
+
+    <h1>Add Recipe</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Recipe Name</mat-label>
+      <input matInput formControlName="name" type="text">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="categoryCode">
+        <mat-option *ngFor="let category of categoryList" [value]="category.code">
+          {{ category.name }}
+          <mat-icon>{{ category.iconRoute }}</mat-icon>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preparation Time (minutes)</mat-label>
+      <input matInput formControlName="preparationTime" type="number">
+      <mat-icon matSuffix>timer</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Difficulty Level (Between 1-5)</mat-label>
+      <input matInput formControlName="difficultyLevel" type="number" max="5">
+      <mat-icon matSuffix>stars</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+    <div formArrayName="ingredients" >
+      <div *ngFor="let ingred of ingredients.controls; let i=index">
+        <mat-form-field appearance="fill">
+            <textarea matInput [formControlName]="i" placeholder="Ingredient"></textarea>
+        </mat-form-field>
+        <button mat-icon-button class="delete-button"  matTooltip="Delete ingredient"  (click)="removeIngredient(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      
+      <button mat-raised-button color="pink" class="add-button" type="button" (click)="addIngredient()"><mat-icon>add_circle_outline</mat-icon>Add Ingredient</button>
+    </div> 
+
+
+    
+    
+    <div formArrayName="preparation" >
+      <div *ngFor="let preparat of preparation.controls; let i=index">
+        <mat-form-field appearance="fill">
+            <textarea matInput [formControlName]="i" placeholder="Preparation step"></textarea>
+        </mat-form-field>
+        <button mat-icon-button  matTooltip="Delete preperation step"  class="delete-button" (click)="removePreparationStep(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <button mat-raised-button color="pink" class="add-button" type="button" (click)="addPreparationStep()"><mat-icon>add_circle_outline</mat-icon>Add Preparation step</button>
+    </div> 
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Image Route</mat-label>
+      <input matInput formControlName="imageRoute" type="text">
+      <mat-icon matSuffix>image</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button color="#831370" class="submit-button" type="submit"
+      [disabled]="!recipeForm.valid">Add Recipe</button>
+
+  </form>
+</div>

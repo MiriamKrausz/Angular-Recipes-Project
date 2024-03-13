@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("~bootstrap/dist/css/bootstrap.css"); */
+@import 'mdb-angular-ui-kit/css/mdb.min.css';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    margin-top: 151px;
+    line-height: 1.0; 
+    margin-bottom: 0px;
+
+}
+.form {
+    background-size: cover;
+    border: solid 2px #010000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.373);
+    /* צל מעט */
+    width: 350px;
+    margin: auto;
+    margin-top: 20vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    /* מרווח בין שדות */
+}
+
+mat-icon {
+    color: rgb(255, 230, 0);;
+
+
+}
+
+mat-label {
+    color: rgb(0, 0, 0);;
+}
+
+.logo {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    height: 40px;
+    /* גובה האלמנט */
+    width: 40px;
+    line-height: 40px;
+    /* גובה השורה זהה לגובה האלמנט כדי ליצור אמצעיות */
+    vertical-align: middle;
+    /* מיושר לאמצע */
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.btn {
+    background-color: rgb(255, 230, 0);;
+    width: 100%;
+}

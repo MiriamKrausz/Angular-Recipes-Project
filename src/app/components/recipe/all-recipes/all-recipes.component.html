@@ -1,0 +1,58 @@
+<div class="search-container">
+
+    <button class="btn filterBtn" type="button" (click)="sidebarVisible = true">
+        Filter
+        <mat-icon>filter_list</mat-icon>
+    </button>
+
+
+    <div class="search-input">
+        <input autocomplete="on" type="search" class="form-control searchInput" [(ngModel)]="searchTerm"
+            placeholder="Type something..." />
+        <button class="btn searchBtn" type="button" (click)="searchRecipes()">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+</div>
+<div *ngIf="isLoading" class="loading">
+    <i class="fa fa-spinner fa-spin"></i> Loading...
+</div>
+
+<div class="allRecipesContainer" *ngIf="!isLoading">
+    <div class="allRecipesCards">
+        <a *ngFor="let recipe of filteredRecipes">
+            <app-small-recipe [recipe]="recipe"></app-small-recipe>
+        </a>
+    </div>
+
+</div>
+
+<p-sidebar [(visible)]="sidebarVisible" color="warn">
+    <div class="sideBar">
+        <div class="filterContainer">
+            <mat-icon>timer</mat-icon>
+            <p>Duration of preparation in minutes:</p>
+            <mat-slider class="custom-slider" min="5" max="180" step="5" showTickMarks discrete style="width: 90%;">
+
+                <input matSliderThumb [(ngModel)]="selectedPreparationTime">
+            </mat-slider>
+            <p>Categories:</p>
+            <div>
+                <div>
+                    <div class="filter-category">
+                        <mat-checkbox *ngFor="let category of categories"
+                            [(ngModel)]="selectedCategories[category.code.toString()]">
+                            {{ category.iconRoute }}
+                            {{ category.name }}
+                        </mat-checkbox>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn" type="button" (click)="filterRecipes()">
+            Filter Recipes
+        </button>
+    </div>
+</p-sidebar>
+<!-- <img src="" -->

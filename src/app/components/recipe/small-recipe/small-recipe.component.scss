@@ -1,0 +1,61 @@
+.example-card {
+  width: 350px;
+   height: 500px;
+   display: flex;
+   color: black;
+   justify-content: space-around;
+   border: 2px solid rgba(0, 0, 0, 0.636);
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.547);
+   margin: 10px; /* יוסיף מרווח בין הכרטיסים */
+ }
+ @media screen and (max-width: 400px) {
+   .example-card {
+     max-width: 100%; 
+     flex-direction: column;/* Set the maximum width to 100% for smaller screens */
+   }
+ }
+.btnCard {
+  background-color:rgb(255, 230, 0);
+}
+
+
+.img-recipe {
+  height: 50%;
+}
+
+.mat-mdc-card-header {
+  justify-content: space-between;
+
+
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.stars {
+  font-size: 20px;
+}
+.recipesContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.allRecipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.filterButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* כדי ליצור מרווח בין האלמנטים */
+}
+.btnDiv{
+  display: flex;
+}

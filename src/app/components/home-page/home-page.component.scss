@@ -1,0 +1,33 @@
+.ngb-carousel {
+    width: 100%;
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.picsum-img-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-caption {
+    text-align: center;
+}
+
+.carousel-caption{
+background-color: rgba(0, 0, 0, 0.085);
+border-radius: 6%;
+font-size: 30px;
+line-height: 1.5;
+margin-bottom:500px;
+}
+
+.carousel-control-prev{
+width: 100%;
+}
+h2{
+    font-size: 45px;
+}

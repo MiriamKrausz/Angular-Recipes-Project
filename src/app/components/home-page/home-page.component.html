@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngIf="images && images.length > 0">
+        <ngb-carousel>
+            <ng-template ngFor let-image [ngForOf]="images">
+                <ng-template ngbSlide>
+                    <div class="carousel-caption text-center">
+                        <h2>Welcome to our recipe site!!</h2>
+                        <p>We are proud to present to you our perfect recipe site!  Appetizing!!!</p>
+                    </div>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="image" alt="Slide" />
+                    </div>
+                </ng-template>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="example-container">
+  <form [formGroup]="editRecipeForm" class="form" (ngSubmit)="saveChanges()">
+
+    <h1>Edit Recipe</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Recipe Name</mat-label>
+      <input matInput formControlName="name" type="text">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="categoryCode">
+        <mat-option *ngFor="let category of categoryList" [value]="category.code">
+          {{ category.name }}
+          <mat-icon>{{ category.iconRoute }}</mat-icon>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preparation Time (minutes)</mat-label>
+      <input matInput formControlName="preparationTime" type="number">
+      <mat-icon matSuffix>timer</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Difficulty Level (Between 1-5)</mat-label>
+      <input matInput formControlName="difficultyLevel" type="number" max="5">
+      <mat-icon matSuffix>stars</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ingredients (separate with comma)</mat-label>
+      <textarea matInput formControlName="ingredients" class="input-field"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preparation steps(Each step in a separate line)</mat-label>
+      <textarea matInput formControlName="preparation" class="input-field"></textarea>
+    </mat-form-field>
+    <div class="btnContainer">
+   
+      <button mat-raised-button class="submit-button btn" type="submit"
+        [disabled]="!editRecipeForm.valid">Save
+        </button>
+    </div>
+    <!-- <div class="btnContainer">
+      <button mat-raised-button class="cancel-button btn" type="button" (click)="cancel()">Cancel</button>
+
+      <button mat-raised-button class="submit-button btn" type="submit"
+        [disabled]="!editRecipeForm.valid">Save
+        </button>
+    </div> -->
+
+  </form>
+</div>
