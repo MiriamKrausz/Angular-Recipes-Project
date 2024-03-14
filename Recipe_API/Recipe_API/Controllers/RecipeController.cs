@@ -289,38 +289,30 @@ namespace Recipe_API.Controllers
                },
                           new Recipe
     {
-        Code = 11,
-        Name = "3 layer cheesecake",
-        CategoryCode = 3,
-        PreparationTime =35,
-        DifficultyLevel=3,
+         Code = 11,
+        Name = "Iced Coffee",
+        CategoryCode = 1,
+        PreparationTime = 5,
+        DifficultyLevel = 1,
         DateAddedToWebsite = new DateTime(2024, 01, 25),
-                 Ingredients = new List<string>
-                 {
-                  "200 grams of vanilla biscuits.",
-                   "50 grams of melted butter.",
-                   "2 L eggs at room temperature.",
-                   "60 grams of sugar (1/4 cup).",
-                   "10 grams of cornflour (tablespoon).",
-                   "teaspoon of vanilla extract."
-                 },
-                 Preparation = new List<string>
-                 {
-                   "Heat the oven to 180 degrees.",
-
-                   "In a food processor with a steel blade, grind the biscuits to a powder, and mix with the melted butter.",
-
-                  "Line the bottom of the herring with baking paper.",
-
-                  "wrap the outside of the mold with foil."
+        Ingredients = new List<string>
+        {
+            "2 cups of brewed coffee, cooled to room temperature.",
+            "1 cup of milk (any type you prefer).",
+            "2 tablespoons of sugar (adjust to taste).",
+            "Ice cubes."
         },
-                 UserCode = 2,
-                 ImageRoute = "../../../../assets/images/food/שמנת.jpg"
-               },
-
-
-
-
+        Preparation = new List<string>
+        {
+            "Brew your favorite coffee and let it cool down to room temperature.",
+            "In a pitcher, mix the cooled coffee with milk and sugar. Stir until the sugar dissolves completely.",
+            "Fill glasses with ice cubes.",
+            "Pour the coffee mixture over the ice cubes.",
+            "Stir gently and enjoy!"
+        },
+        UserCode = 2,
+        ImageRoute = "../../../../assets/images/food/iced-coffe.jpg"
+        }
   };
     // GET: api/<CategoryController>
     [HttpGet]

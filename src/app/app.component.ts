@@ -22,11 +22,11 @@ import { FooterComponent } from "./components/footer/footer.component";
 export class AppComponent {
   title = 'Recipes';
   
-  // הפוקנציה הראשונה שעולה מיד בהעלת הקומפוננטה לאויר
-  ngOnInit(): void {
-    window.scrollTo(0, 0);
+  // // הפוקנציה הראשונה שעולה מיד בהעלת הקומפוננטה לאויר
+  // ngOnInit(): void {
+  //   window.scrollTo(0, 0);
 
-  }
+  // }
 
 // אחרי שהשתנה אלמנטים (לךדוגמא ששלחנו אינפוט לקומפוננטת ילד והיא השתנתה שם)
   ngOnChanges(changes: SimpleChanges): void {

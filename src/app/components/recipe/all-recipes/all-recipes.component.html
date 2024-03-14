@@ -5,9 +5,16 @@
         <mat-icon>filter_list</mat-icon>
     </button>
 
-
+<!-- 
     <div class="search-input">
         <input autocomplete="on" type="search" class="form-control searchInput" [(ngModel)]="searchTerm"
+            placeholder="Type something..." />
+        <button class="btn searchBtn" type="button" (click)="searchRecipes()">
+            <i class="fas fa-search"></i>
+        </button>
+    </div> -->
+    <div class="search-input">
+        <input autocomplete="on" type="search" class="form-control searchInput" [(ngModel)]="searchTerm"  (ngModelChange)="searchRecipes()"
             placeholder="Type something..." />
         <button class="btn searchBtn" type="button" (click)="searchRecipes()">
             <i class="fas fa-search"></i>

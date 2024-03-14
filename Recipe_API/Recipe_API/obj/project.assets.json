@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\תשפד\\Angular\\RecipesApp\\Recipe_API\\Recipe_API\\Recipe_API.csproj",
+      "projectUniqueName": "D:\\תשפד\\Angular\\פרויקט מתכונים\\RecipesApp\\Recipe_API\\Recipe_API\\Recipe_API.csproj",
       "projectName": "Recipe_API",
-      "projectPath": "D:\\תשפד\\Angular\\RecipesApp\\Recipe_API\\Recipe_API\\Recipe_API.csproj",
+      "projectPath": "D:\\תשפד\\Angular\\פרויקט מתכונים\\RecipesApp\\Recipe_API\\Recipe_API\\Recipe_API.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\תשפד\\Angular\\RecipesApp\\Recipe_API\\Recipe_API\\obj\\",
+      "outputPath": "D:\\תשפד\\Angular\\פרויקט מתכונים\\RecipesApp\\Recipe_API\\Recipe_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
