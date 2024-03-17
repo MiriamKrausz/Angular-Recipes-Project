@@ -29,11 +29,15 @@ export class RecipeDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
+    try {
+      window.scrollTo(0, 0);
+
+    } catch (error) {
+      console.error('Error');
+    }
     this.route.paramMap.subscribe(params => {
       this.recipeId = +params.get('id')!;
     });
-
     this.recipeService.getRecipeById(this.recipeId).subscribe(recipe => {
       this.recipeToShow = recipe;
       this.categoryService.getCategoryById(recipe.categoryCode).subscribe(category => {
@@ -91,6 +95,6 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
 
- 
-  
+
+
 }

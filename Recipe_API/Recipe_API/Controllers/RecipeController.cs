@@ -287,11 +287,11 @@ namespace Recipe_API.Controllers
                  UserCode = 1,
                  ImageRoute = "../../../../assets/images/food/Kish.jpg"
                },
-                          new Recipe
+                     new Recipe
     {
-         Code = 11,
+      Code = 11,
         Name = "Iced Coffee",
-        CategoryCode = 1,
+        CategoryCode = 3,
         PreparationTime = 5,
         DifficultyLevel = 1,
         DateAddedToWebsite = new DateTime(2024, 01, 25),
@@ -312,7 +312,164 @@ namespace Recipe_API.Controllers
         },
         UserCode = 2,
         ImageRoute = "../../../../assets/images/food/iced-coffe.jpg"
-        }
+
+
+     },
+     new Recipe
+     {
+     Code = 12,
+        Name = "Lemon Meringue Pie",
+        CategoryCode = 2,
+        PreparationTime = 60,
+        DifficultyLevel = 3,
+        DateAddedToWebsite = new DateTime(2024, 03, 16),
+        Ingredients = new List<string>
+        {
+            "1 9-inch pie crust, pre-baked.",
+            "1 cup granulated sugar.",
+            "2 tablespoons all-purpose flour.",
+            "3 tablespoons cornstarch.",
+            "1/4 teaspoon salt.",
+            "1 1/2 cups water.",
+            "2 lemons, juiced and zested.",
+            "2 tablespoons unsalted butter.",
+            "4 large egg yolks.",
+            "4 large egg whites.",
+            "1/2 cup granulated sugar for meringue."
+        },
+        Preparation = new List<string>
+        {
+            "Preheat your oven to 350°F (175°C).",
+            "In a medium saucepan, whisk together 1 cup of sugar, flour, cornstarch, and salt.",
+            "Stir in water, lemon juice, and lemon zest.",
+            "Cook over medium-high heat, stirring frequently, until mixture comes to a boil.",
+            "Stir in butter.",
+            "In a separate bowl, whisk egg yolks until smooth.",
+            "Gradually whisk in some of the hot sugar mixture.",
+            "Return the egg mixture to the saucepan and bring to a gentle boil.",
+            "Cook and stir for 2 minutes.",
+            "Pour filling into pre-baked pie crust.",
+            "In a large mixing bowl, beat egg whites until soft peaks form.",
+            "Gradually add 1/2 cup of sugar, beating until stiff peaks form and sugar is dissolved.",
+            "Spread meringue over hot filling, sealing edges to crust.",
+            "Bake for 12-15 minutes, or until meringue is golden brown.",
+            "Cool on a wire rack for 1 hour.",
+            "Refrigerate for at least 3 hours before serving."
+        },
+        UserCode = 1,
+        ImageRoute = "../../../../assets/images/food/lemon_pie.jpg"
+        },
+        new Recipe{
+        Code = 13,
+        Name = "Orange Squash Soup",
+        CategoryCode = 1,
+        PreparationTime = 45,
+        DifficultyLevel = 2,
+        DateAddedToWebsite = new DateTime(2024, 03, 16),
+        Ingredients = new List<string>
+        {
+            "1 large butternut squash, peeled, seeded, and cubed.",
+            "2 tablespoons olive oil.",
+            "1 onion, chopped.",
+            "2 cloves garlic, minced.",
+            "4 cups vegetable or chicken broth.",
+            "1 teaspoon ground ginger.",
+            "1/2 teaspoon ground cinnamon.",
+            "Salt and pepper to taste.",
+            "Optional: 1/2 cup heavy cream or coconut milk for creaminess."
+        },
+        Preparation = new List<string>
+        {
+            "Preheat your oven to 400°F (200°C).",
+            "Toss the cubed butternut squash with 1 tablespoon of olive oil and spread onto a baking sheet.",
+            "Roast in the preheated oven for 25-30 minutes, or until squash is tender and lightly browned.",
+            "In a large pot, heat the remaining olive oil over medium heat.",
+            "Add the chopped onion and cook until translucent, about 5 minutes.",
+            "Add the minced garlic and cook for an additional 1-2 minutes.",
+            "Add the roasted butternut squash, broth, ground ginger, and ground cinnamon to the pot.",
+            "Bring the mixture to a simmer, then reduce heat to low and let it simmer for 15-20 minutes.",
+            "Use an immersion blender to puree the soup until smooth. Alternatively, transfer the soup in batches to a blender and blend until smooth, then return to the pot.",
+            "Season with salt and pepper to taste. If desired, stir in heavy cream or coconut milk for added creaminess.",
+            "Serve hot, optionally garnished with a sprinkle of ground cinnamon or a drizzle of cream."
+        },
+        UserCode = 2,
+        ImageRoute = "../../../../assets/images/food/soup.jpg"
+        },
+        new Recipe{ Code = 14,
+        Name = "Pastrami Burger",
+        CategoryCode = 9,
+        PreparationTime = 45,
+        DifficultyLevel = 2,
+        DateAddedToWebsite = new DateTime(2024, 03, 16),
+        Ingredients = new List<string>
+        {
+            "1 lb ground beef (preferably 80/20 lean to fat ratio).",
+            "4 hamburger buns.",
+            "4 slices pastrami.",
+            "4 slices Swiss cheese.",
+            "1 onion, thinly sliced.",
+            "4 leaves lettuce.",
+            "4 slices tomato.",
+            "Pickles, for serving.",
+            "Salt and pepper to taste.",
+            "Optional: mustard, ketchup, mayonnaise, or other condiments of your choice."
+        },
+        Preparation = new List<string>
+        {
+            "Preheat your grill or grill pan to medium-high heat.",
+            "Divide the ground beef into 4 equal portions and shape each portion into a patty slightly larger than the size of your hamburger buns.",
+            "Season the patties generously with salt and pepper on both sides.",
+            "Place the patties on the grill and cook for 4-5 minutes on each side, or until desired level of doneness is reached.",
+            "During the last minute of cooking, place a slice of Swiss cheese on each patty to melt.",
+            "While the patties are cooking, toast the hamburger buns on the grill until lightly golden brown.",
+            "To assemble the burgers, place a lettuce leaf on the bottom half of each bun, followed by a slice of tomato and some sliced onion.",
+            "Place a cooked burger patty with melted cheese on top of the onion slices.",
+            "Top each patty with a slice of pastrami.",
+            "Spread your desired condiments on the top half of each bun and place it on top of the pastrami.",
+            "Serve immediately, optionally with pickles on the side."
+        },
+        UserCode = 1,
+        ImageRoute = "../../../../assets/images/food/6.jpg"
+},
+        new Recipe
+{
+    Code = 15,
+    Name = "Belgian Waffle with Strawberries and Blueberries",
+    CategoryCode = 7,
+    PreparationTime = 30,
+    DifficultyLevel = 3,
+    DateAddedToWebsite = new DateTime(2024, 03, 16),
+    Ingredients = new List<string>
+    {
+        "1 1/2 cups all-purpose flour.",
+        "1 tablespoon sugar.",
+        "1 tablespoon baking powder.",
+        "1/4 teaspoon salt.",
+        "1 1/4 cups milk.",
+        "1/3 cup vegetable oil.",
+        "1 large egg.",
+        "1 teaspoon vanilla extract.",
+        "1 cup strawberries, sliced.",
+        "1 cup blueberries.",
+        "Whipped cream or syrup for serving (optional)."
+    },
+    Preparation = new List<string>
+    {
+        "Preheat your waffle iron according to manufacturer's instructions.",
+        "In a large mixing bowl, whisk together the flour, sugar, baking powder, and salt.",
+        "In another bowl, whisk together the milk, vegetable oil, egg, and vanilla extract.",
+        "Pour the wet ingredients into the dry ingredients and stir until just combined. Do not overmix; it's okay if there are a few lumps.",
+        "Pour the batter onto the preheated waffle iron (amount will vary depending on the size of your waffle iron) and cook according to manufacturer's instructions, or until the waffles are golden brown and crisp.",
+        "Once the waffles are cooked, transfer them to serving plates.",
+        "Top each waffle with a generous amount of sliced strawberries and blueberries.",
+        "Serve immediately, optionally with whipped cream or syrup on top."
+    },
+    UserCode = 1,
+    ImageRoute = "../../../../assets/images/food/3.jpg"
+}
+
+
+
   };
     // GET: api/<CategoryController>
     [HttpGet]

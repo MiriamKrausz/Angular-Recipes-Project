@@ -92,6 +92,9 @@ export class RegisterComponent implements OnInit {
                   icon: 'success',
                   title: 'You have successfully registered!',
                 })
+                sessionStorage.setItem('userId',password);
+              sessionStorage.setItem('userName', userName);
+                this.router.navigate(['/recipe'])
                 console.log(res)
               },
               error: (err) => {
@@ -99,7 +102,6 @@ export class RegisterComponent implements OnInit {
 
               }
             })
-            this.router.navigate(['recipe'])
           }
         }
       );

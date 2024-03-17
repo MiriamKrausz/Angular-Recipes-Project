@@ -11,8 +11,6 @@
       Recipes > {{category.name}}>
     </h1>
 
-
-
     <h2 id="recipeName">
       {{recipeToShow.name}}
     </h2>
@@ -31,33 +29,42 @@
 
 </div>
 
-<div class="all-recipe-details">
-  <div style="width: 40%; " class="between">
-    <div class="info">
-      <div style="font-size: 20px;">Preparation time:</div>
-      <div style="font-size: 30px;"> {{ recipeToShow.preparationTime | durationFormat }}</div>
-    </div>
-    <p class="line"></p>
-    <div class="info">
-      <div style="font-size: 20px; line-height: 1.0;">Level of difficulty:</div>
-      <div style="font-size: 30px;"> {{ recipeToShow.difficultyLevel | difficultyLevel }}</div>
-    </div>
-  </div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <mat-icon>local_grocery_store</mat-icon>
+    <h3 class="list-group-item-h3"><b>Number of Ingredients:</b></h3>
+    {{ recipeToShow.ingredients.length }}
+  </li>
+  <li class="list-group-item">
+    <mat-icon> history_toggle_off</mat-icon>
+    <h3 class="list-group-item-h3"><b>Preparation Time:</b></h3>
+    {{ recipeToShow.preparationTime |durationFormat }}
+  </li>
+  <li class="list-group-item">
+    <mat-icon> star_rate</mat-icon>
+    <h3 class="list-group-item-h3"><b>Difficulty Level:</b></h3>
+    {{ recipeToShow.difficultyLevel |difficultyLevel}}
+  </li>
+  <li class="list-group-item">
+    <mat-icon> category</mat-icon>
+    <h3 class="list-group-item-h3"><b>Category</b></h3>
+    {{ category.name }} 
+  </li>
+</ul>
 
-  <div class="ingredients">
-    <h2>Ingredients:</h2>
-    <ul>
-      <li *ngFor="let ingredient of recipeToShow.ingredients">
-        - {{ingredient}}
-      </li>
-    </ul>
-  </div>
-  <div class="ingredients">
-    <h2>Preparation steps:</h2>
-    <ul>
-      <li *ngFor="let instruction of recipeToShow.preparation;let i=index">
-        {{i+1}}. {{instruction}}
-      </li>
-    </ul>
-  </div>
+<div class="ingredients">
+  <h2>Ingredients:</h2>
+  <ul>
+    <li *ngFor="let ingredient of recipeToShow.ingredients">
+      - {{ingredient}}
+    </li>
+  </ul>
+</div>
+<div class="ingredients">
+  <h2>Preparation steps:</h2>
+  <ul>
+    <li *ngFor="let instruction of recipeToShow.preparation;let i=index">
+      {{i+1}}. {{instruction}}
+    </li>
+  </ul>
 </div>
