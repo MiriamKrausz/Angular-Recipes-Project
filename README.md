@@ -35,7 +35,7 @@ The application utilizes various external design libraries, including Bootstrap,
 ## Usage
 
 1. Clone the repository to your local machine.
-```git clone https://github.com/ShevyKossovsky/RecipesApp.git```
+```git clone https://github.com/MiriamKrausz/Angular-Recipes-Project```
 2. Navigate to the project directory.
 3. Install the necessary dependencies
 ```npm install```
