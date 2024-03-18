@@ -1,6 +1,6 @@
 ﻿# Recipe Management Application
 
-![Recipe Management](../RecipesApp/Client/src/assets/images/screenshot.png)
+![Recipe Management](/Client/src/assets/images/screenshot.png)
 
 ## Description
 
